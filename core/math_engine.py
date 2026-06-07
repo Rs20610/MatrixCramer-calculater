@@ -11,13 +11,13 @@ def solve_by_cramer(matrix_A, vector_B):
         if np.isclose(det_A, 0, atol=1e-9):
             return {
                 "success": False,
-                "message": "❌ ไม่สามารถหาคำตอบเดี่ยวได้ เนื่องจากค่า Determinant หลักมีค่าเป็น 0"
+                "message": "❌ ไม่สามารถหาคำตอบเดี่ยวได้ เนื่องจากค่า det(A) = 0"
             }
         
         n = len(vector_B)
         solutions = []
         
-        # 2. วนลูปคำนวณตามจำนวนตัวแปรจริง (คำนวณได้ทั้ง 2 และ 3 รอบ)
+        # 2. วนลูปคำนวณตามจำนวนตัวแปรจริง
         for i in range(n):
             Ai = matrix_A.copy()
             Ai[:, i] = vector_B

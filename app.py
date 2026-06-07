@@ -22,7 +22,7 @@ if mode == "2 ตัวแปร (เมทริกซ์ 2x2)":
     with row2[0]: a21 = st.number_input("a21", value=1.0, key="2x2_a21")
     with row2[1]: a22 = st.number_input("a22", value=-3.0, key="2x2_a22")
     
-    st.header("ค่าคงหลังเครื่องหมายเท่ากับ (Vector B)")
+    st.header("ค่าคงตัวหลังเครื่องหมายเท่ากับ (Vector B)")
     cols_b = st.columns(2)
     with cols_b[0]: b1 = st.number_input("b1", value=5.0, key="2x2_b1")
     with cols_b[1]: b2 = st.number_input("b2", value=-1.0, key="2x2_b2")
@@ -42,7 +42,7 @@ if mode == "2 ตัวแปร (เมทริกซ์ 2x2)":
             res_cols[1].metric(label="ค่าตัวแปร Y", value=f"{solutions[1]:.4f}")
             st.info(f"💡 ค่า det(A) = {result['det_A']:.4f}")
 
-else: # โหมด 3x3 (โค้ดตัวเดิมที่คุณเคยทำ)
+else: # โหมด 3x3
     st.header("สัมประสิทธิ์หน้าตัวแปร (Matrix A 3x3)")
     row1 = st.columns(3)
     row2 = st.columns(3)
@@ -57,7 +57,7 @@ else: # โหมด 3x3 (โค้ดตัวเดิมที่คุณเ
     with row3[1]: a32 = st.number_input("a32", value=2.0, key="3x3_a32")
     with row3[2]: a33 = st.number_input("a33", value=1.0, key="3x3_a33")
     
-    st.header("ค่าคงหลังเครื่องหมายเท่ากับ (Vector B)")
+    st.header("ค่าคงตัวหลังเครื่องหมายเท่ากับ (Vector B)")
     cols_b = st.columns(3)
     with cols_b[0]: b1 = st.number_input("b1", value=3.0, key="3x3_b1")
     with cols_b[1]: b2 = st.number_input("b2", value=0.0, key="3x3_b2")
