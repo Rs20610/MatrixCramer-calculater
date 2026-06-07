@@ -1,0 +1,12 @@
+git config --global user.name "Rs20610"
+git config --global user.email "rungsai.rattana@gmail.com"
+
+pip install -r requirements.txt
+streamlit run app.py
+
+git init
+git add .
+git commit -m "my first deployment"
+git branch -M main
+git remote add origin https://github.com/ชื่อบัญชีของคุณ/cramer-matrix-calc.git
+git push -u origin main
